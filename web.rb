@@ -1,16 +1,12 @@
 # notifyer.rb
 require 'sinatra'
-require 'pry'
 require 'dotenv'
 require 'hipchat'
 require 'jira'
 
 # preload
 Dotenv.load
-$: << File.expand_path(File.dirname(__FILE__))
-require 'application.rb'
-require 'modules/hipchat.rb'
-require 'modules/jira.rb'
+require './notifyer.rb'
 
 post '/updated/:ticket' do
   display_name = Jira.user_display_name(params[:user_id])

@@ -1,3 +1,6 @@
+require './modules/hipchat.rb'
+require './modules/jira.rb'
+
 module Notifyer
 
   # app settings
