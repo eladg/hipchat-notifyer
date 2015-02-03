@@ -1,1 +1,1 @@
-web: bundle exec ruby notifyer.rb -p $PORT
+web: bundle exec ruby web.rb -p $PORT
