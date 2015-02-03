@@ -12,11 +12,6 @@ require 'application.rb'
 require 'modules/hipchat.rb'
 require 'modules/jira.rb'
 
-get '/pry' do
-  binding.pry
-  {}
-end
-
 post '/updated/:ticket' do
   display_name = Jira.user_display_name(params[:user_id])
   message = "(chef): I've noticed ticket: #{params[:ticket]} was updated by #{display_name}... #{fun_emoji}\nCheck it out: https://stringwire.atlassian.net/browse/#{params[:ticket]}"
