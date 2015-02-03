@@ -12,6 +12,7 @@ module HNConfig
   HIPCHAT_API_DEFAULTS  = "format=json"
 end
 
+
 def client
   HipChat::Client.new(HNConfig::HIPCHAT_TOKEN, :api_version => 'v2')[HNConfig::HIPCHAT_ROOM_NAME]
 end
@@ -19,8 +20,12 @@ end
 def msg_params
   {
     :message_format => 'text',
-    :color => 'gray'
+    :color => HNConfig::HIPCHAT_MSG_COLOR
   }
+end
+
+def sender
+  HNConfig::HIPCHAT_MSG_FROM
 end
 
 def fun_hi
