@@ -12,7 +12,6 @@ module HNConfig
   HIPCHAT_API_DEFAULTS  = "format=json"
 end
 
-
 def client
   HipChat::Client.new(HNConfig::HIPCHAT_TOKEN, :api_version => 'v2')[HNConfig::HIPCHAT_ROOM_NAME]
 end
@@ -30,6 +29,10 @@ end
 
 def fun_hi
   ["hey", "Hey pal!", "hi", "hi pal!", "Hello", "sup", "Hey", "Hey", "Hate", "herro", "hiiiii", "hola", "Howdy", "Ello", "hiya", "ANYTHING", "haiiii", "Haaaaayye", "Hii", "heyooo", "hi", "yo", "yo", "hey", "hihihi", "hey sexy ;)", "aloha", "bonjour", "hey", "I", "hey", "whuddup", "whaddup", "wasssuuuppp", "hullo", "heya", "HEYYYYYYY", "hayyyy", "hihasdgiii"].sample
+end
+
+def fun_everyone
+  ["y'all", "guys'n'girls", "everyone", "friends", "devs", "space cowboys"].sample
 end
 
 def fun_emoji
